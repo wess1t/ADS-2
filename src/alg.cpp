@@ -32,7 +32,7 @@ double sinn(double x, uint16_t count) {
   double s = 0.;
   for (uint64_t n = 1; n <= count; n++) {
     uint64_t e = 2 * n - 1;
-    double t = pown(x, e) / static_cast<double>fact(e);
+    double t = pown(x, e) / static_cast<double>(fact(e));
     if (n % 2 == 0) {
       s -= t;
     } else {
@@ -46,7 +46,7 @@ double cosn(double x, uint16_t count) {
   double s = 0.;
   for (uint64_t n = 1; n <= count; n++) {
     uint64_t e = 2 * n - 2;
-    double t = pown(x, e) / static_cast<double>fact(e);
+    double t = pown(x, e) / static_cast<double>(fact(e));
     if (n % 2 == 0) {
       s -= t;
     } else {
