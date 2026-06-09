@@ -1,12 +1,13 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
+#include <cstdio>
 #include "alg.h"
 
 
 double pown(double value, uint16_t n) {
   double res = 1.;
   for (uint64_t i = 0; i < n; i++)
-    res *= val;
+    res *= value;
   return res;
 }
 
