@@ -1,6 +1,5 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
-#include <cstdio>
 #include "alg.h"
 
 
@@ -19,7 +18,7 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-  return pown(x, n) / (double)fact(n);
+  return pown(x, n) / static_cast<double>fact(n);
 }
 
 double expn(double x, uint16_t count) {
@@ -33,7 +32,7 @@ double sinn(double x, uint16_t count) {
   double s = 0.;
   for (uint64_t n = 1; n <= count; n++) {
     uint64_t e = 2 * n - 1;
-    double t = pown(x, e) / (double)fact(e);
+    double t = pown(x, e) / static_cast<double>fact(e);
     if (n % 2 == 0) {
       s -= t;
     } else {
@@ -47,7 +46,7 @@ double cosn(double x, uint16_t count) {
   double s = 0.;
   for (uint64_t n = 1; n <= count; n++) {
     uint64_t e = 2 * n - 2;
-    double t = pown(x, e) / (double)fact(e);
+    double t = pown(x, e) / static_cast<double>fact(e);
     if (n % 2 == 0) {
       s -= t;
     } else {
